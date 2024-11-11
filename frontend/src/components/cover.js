@@ -2,7 +2,12 @@
 import React from "react";
 import Box from "@mui/material/Box";
 
-const Cover = ({ backgroundType, backgroundSrc, children }) => {
+const Cover = ({
+  backgroundType = "image",
+  backgroundSrc,
+  backgroundColor = "#000",
+  children,
+}) => {
   return (
     <Box
       sx={{
@@ -13,10 +18,12 @@ const Cover = ({ backgroundType, backgroundSrc, children }) => {
         alignItems: "center",
         justifyContent: "center",
         overflow: "hidden",
-        backgroundColor: "#000",
+        backgroundColor:
+          backgroundType === "color" ? backgroundColor : "transparent",
       }}
     >
-      {backgroundType === "image" && (
+      {/* Render Image Background */}
+      {backgroundType === "image" && backgroundSrc && (
         <Box
           component="img"
           src={backgroundSrc}
@@ -32,7 +39,9 @@ const Cover = ({ backgroundType, backgroundSrc, children }) => {
           }}
         />
       )}
-      {backgroundType === "video" && (
+
+      {/* Render Video Background */}
+      {backgroundType === "video" && backgroundSrc && (
         <Box
           component="video"
           src={backgroundSrc}
@@ -51,7 +60,8 @@ const Cover = ({ backgroundType, backgroundSrc, children }) => {
           }}
         />
       )}
-      {/* Overlay content */}
+
+      {/* Overlay Content */}
       <Box
         sx={{
           position: "relative",

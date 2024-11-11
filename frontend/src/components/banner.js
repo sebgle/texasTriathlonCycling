@@ -9,9 +9,9 @@ const Banner = ({ text = "FAQ", gradientColors = ["#D44600", "#D83AA3"] }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        height: "150px", // Adjust height as needed
+        height: "150px",
         background: `linear-gradient(90deg, ${gradientColors[0]}, ${gradientColors[1]})`,
-        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)", // Adds a subtle shadow
+        boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
         color: "white",
         textAlign: "center",
         fontWeight: "bold",

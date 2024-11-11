@@ -1,16 +1,15 @@
-import "./App.css";
+import React from "react";
 import Navbar from "./components/navbar";
 import Cover from "./components/cover";
-import Card from "./components/card";
 import Banner from "./components/banner";
-
+import Card from "./components/card";
+import pogiImage from "./assets/pgoi2.jpg";
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Cover />
+      <Cover backgroundType="image" backgroundSrc={pogiImage}></Cover>
       <Banner text="Join Us" />
-      <Card />
     </div>
   );
 }

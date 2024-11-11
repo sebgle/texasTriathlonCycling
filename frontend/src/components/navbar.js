@@ -13,6 +13,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -56,9 +57,9 @@ const Navbar = () => {
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/4/44/Texas_Longhorns_logo.svg"
+            src={logo}
             alt="Longhorn Logo"
-            style={{ width: "40px", height: "auto", marginRight: "16px" }}
+            style={{ width: "75px", height: "auto", marginRight: "16px" }}
           />
         </Box>
 
